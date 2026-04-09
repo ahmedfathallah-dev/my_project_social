@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Color css -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/login.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
     <title>تسجيل الدخول</title>
 </head>
+
 <body>
-    
+    <main>
+        <div class="title">
+            <h1>مرحباً بك</h1>
+            <p>مساحتك الخاصة لتدوين يومياتك، ومشاركة لحظاتك مع من تحب بضغطة زر.</p>
+            <img src="assets/image/login.png" alt="">
+        </div>
+        <div class="card">
+                <h2>تسجيل الدخول</h2>
+            <form action="">
+                <label for="phonNumber">رقم الهاتف او البريد الاكترونى</label>
+                <input type="text" id="phonNumber" name="" placeholder="رقم الهاتف / البريد الاكترونى" dir="rtl">
+                <label for="password">كلمة المرور</label>
+                <input type="password" id="password" name="" minlength="8" placeholder="كلمة المرور" dir="rtl">
+                <button type="button" id="togglePassword" onclick=""><i class="fa-solid fa-eye"></i></button>
+                <button class="but" onclick="">دخول</button>
+            </form>
+            <p class="link"><a href="#">انشاء حساب جديد</a></p>
+        </div>
+    </main>
+    <script src="assets/js/login.js"></script>
 </body>
+
 </html>
