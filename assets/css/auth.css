@@ -3,7 +3,16 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--font-main);
-
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+a{
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
 }
 main{
     display: flex;
@@ -11,9 +20,80 @@ main{
     align-items: center;
     align-content: center;
     justify-content: space-around;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: var(--bg-body);
 }
+header{
+    background-color: var(--primary);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 190px;
+    position: relative;
+}
+.logo a{
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--text-main);
+}
+#userIcon {
+    transition: transform 0.6s ease-in-out;
+    display: inline-block;
+}
+.span-gear{
+    transform: rotate(180deg) !important;
+}
+.menu ul li a{
+    font-size: 30px;
+    color: var(--text-main);
+}
+.sub-menu-wrap{
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    width: 300px;
+    
+    /* الحالة قبل الظهور (مختفي وصغير) */
+    opacity: 0;
+    transform: scale(0.8); /* يبدأ بحجم أصغر */
+    transform-origin: top left; /* النقطة اللي "بينبثق" منها (من فوق يمين) */
+    visibility: hidden; /* عشان ميكونش قابل للضغط وهو مختفي */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+    z-index: 100;
+}
+.sub-menu-wrap.open-menu {
+    opacity: 1;
+    transform: scale(1); /* يرجع لحجمه الطبيعي */
+    visibility: visible;
+}
+.sub-menu{
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 0 15px 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* ظل أعمق عشان يبان إنه "منبثق" فوق المحتوى */
+    border: 1px solid var(--border);
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 12px 0;
+    color: var(--text-main);
+    transition: 0.3s ease-in-out;
+}
+.sub-menu-link:hover{
+    color: var(--text-muted);
+    transform: translateX(-10%);
+}
+/* Main */
 .card{
     display: flex;
     flex-direction: column;
@@ -58,7 +138,7 @@ input, .but{
 .but:hover{
     background-color: var(--primary-hover);
 }
-img{
+.hero-img{
     width: 600px;
     animation: moveImage 1s linear infinite alternate;
 }
@@ -90,21 +170,32 @@ p{
 .link a:hover{
     color: var(--color-hover);
 }
-
+/* Media */
 @media(max-width: 600px){
     main{
         text-align: center;
+    }
+    nav{
+        padding: 20px 48px;
+    }
+    .logo a{
+        font-size: 25px;
+        font-weight: 900;
     }
     .card{
         margin: 10px;
         width: 300px;
         text-align: center;
     }
-    img{
+    .hero-img{
         width: 250px;
     }
     .title{
         width: 300px;
+    }
+    .sub-menu-wrap{
+        width: 160px;
+        left: 90px;
     }
 }
 /* Error-Shake */

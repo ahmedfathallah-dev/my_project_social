@@ -18,11 +18,36 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#" title="ڤيرد">ڤـــــــيرد</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" id="userIcon" onclick="toggleMenu()"><i class="fa-solid fa-gear"></i></a></li>
+                </ul>
+            </div>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-menu">
+                        <a href="#" class="sub-menu-link">
+                            English <i class="fa-solid fa-language"></i>
+                            <!-- <span><img class="icon" width="10%" src="assets/icon/egypt.png"></span> -->
+                        </a>
+                        <a href="#" id="darkModeToggle" class="sub-menu-link">
+                            <span id="theme-text">الوضع الليلي</span> <i class="fa-solid fa-moon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="title">
             <h1>مرحباً بك</h1>
             <p>مساحتك الخاصة لتدوين يومياتك، ومشاركة لحظاتك مع من تحب بضغطة زر.</p>
-            <img src="assets/image/login.png" alt="">
+            <img class="hero-img" src="assets/image/login.png" alt="">
         </div>
         <div class="card">
                 <h2>تسجيل الدخول</h2>
@@ -37,7 +62,9 @@
             <p class="link"><a href="#">انشاء حساب جديد</a></p>
         </div>
     </main>
+    <!-- Java Script -->
     <script src="assets/js/auth.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
