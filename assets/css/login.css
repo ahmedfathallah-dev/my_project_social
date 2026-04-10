@@ -36,7 +36,7 @@ input, .but{
     margin: 10px 0;
     border-radius: 5px;
     outline: none;
-    border: var(--text-muted) solid 1px;
+    border: var(--border) solid 1px;
     color: var(--text-main);
     padding-left: 35px;
 }
@@ -53,9 +53,10 @@ input, .but{
     color: var(--bg-card);
     font-size: 20px;
     line-height: 10px;
+    border: none;
 }
 .but:hover{
-    background-color: var(--primary-light);
+    background-color: var(--primary-hover);
 }
 img{
     width: 600px;
@@ -80,13 +81,13 @@ p{
 }
 .link a{
     text-decoration: none;
-    color: var(--bg-card);
-    background-color: var(--new-action);
+    color: var(--text-main);
+    /* background-color: var(--new-action); */
     padding: 0 10px;
     border-radius: 5px;
 }
 .link a:hover{
-    background-color: var(--new-action-light);
+    color: var(--color-hover);
 }
 
 @media(max-width: 600px){
