@@ -1,12 +1,12 @@
 // Form Validation
 const loginForm = document.querySelector('form');
 // تصحيح: ضفنا # لأنهم ID
-const phonNumber = document.querySelector('#phonNumber'); 
-const password = document.querySelector('#password');
+const inputText = document.querySelector('#phonNumber'); 
+const inputPassword = document.querySelector('#password');
 const togglePass = document.querySelector('#togglePassword');
 
 loginForm.addEventListener('submit', function(event) {
-    const inputs = [phonNumber, password];
+    const inputs = [inputText, inputPassword];
     let hasError = false;
 
     inputs.forEach(input => {
