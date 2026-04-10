@@ -10,7 +10,7 @@
     --new-action: #E8F5E9;   /* خلفية خفيفة للإشعارات أو الحقول النشطة */
     
     /* الخطوط */
-    --font-main: 'Cairo', sans-serif;
+    --font-main: "Readex Pro", sans-serif;
 }
 
 [data-theme="dark"] {
