@@ -12,7 +12,7 @@ function toggleMenu() {
 
 if (userIcon) {
     userIcon.onclick = function (e) {
-        e.stopPropagation(); 
+        e.stopPropagation();
         toggleMenu();
     };
 }
@@ -32,7 +32,7 @@ if (currentTheme === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
     if (themeText) themeText.innerText = " الوضع النهاري";
     const icon = darkModeToggle.querySelector('i');
-    if(icon) { icon.classList.replace('fa-moon', 'fa-sun'); }
+    if (icon) { icon.classList.replace('fa-moon', 'fa-sun'); }
 }
 
 // ثانياً: كود التبديل عند الضغط
@@ -48,13 +48,13 @@ if (darkModeToggle) {
             document.documentElement.removeAttribute("data-theme");
             localStorage.setItem("theme", "light");
             if (themeText) themeText.innerText = " الوضع الليلي";
-            if(icon) icon.classList.replace('fa-sun', 'fa-moon');
+            if (icon) icon.classList.replace('fa-sun', 'fa-moon');
         } else {
             // التبديل للوضع المظلم
             document.documentElement.setAttribute("data-theme", "dark");
             localStorage.setItem("theme", "dark");
             if (themeText) themeText.innerText = " الوضع النهاري";
-            if(icon) icon.classList.replace('fa-moon', 'fa-sun');
+            if (icon) icon.classList.replace('fa-moon', 'fa-sun');
         }
     });
 }
