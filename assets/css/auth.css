@@ -150,6 +150,7 @@ input,
 .hero-img {
     width: 600px;
     animation: moveImage 1s linear infinite alternate;
+    display: inline-block;
 }
 
 @keyframes moveImage {
