@@ -124,7 +124,7 @@ input, .but{
     position: absolute;
     left: 30px;
     top: 200px;
-    color: var(--text-main);
+    color: var(--text-muted);
     border: none;
     cursor: pointer;
     background: none;}
