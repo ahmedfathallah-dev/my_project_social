@@ -20,10 +20,8 @@ nav {
     position: relative;
 }
 
-.logo a {
-    font-size: 40px;
-    font-weight: 900;
-    color: var(--text-main);
+.logo a img{
+    width: 100px;
 }
 
 #userIcon {
