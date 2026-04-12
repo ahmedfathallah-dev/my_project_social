@@ -99,11 +99,10 @@ nav {
     justify-content: center;
     background-color: var(--bg-card);
     width: 400px;
-    height: 350px;
+    /* height: 350px; */
     margin: 50px;
     border-radius: 10px;
     padding-inline: 20px;
-    position: relative;
 }
 
 label {
@@ -119,19 +118,24 @@ input,
     border-radius: 5px;
     outline: none;
     border: var(--border) solid 1px;
-    color: var(--text-main);
-    padding-left: 35px;
-}
-
-#togglePassword {
-    position: absolute;
-    left: 30px;
-    top: 210px;
     color: var(--text-muted);
+    padding-left: 35px;
+    display: inline-block;
+}
+.password-field{
+    position: relative;
+    width: 100%;
+}
+.toggle-btn {
+    position: absolute;
+    left: 10px; /* المسافة من الشمال جوه الـ div */
+    top: 50%;
+    transform: translateY(-50%); /* حركة صايعة عشان السنترة تكون بالملي */
+    background: none;
     border: none;
     cursor: pointer;
-    background: none;
 }
+
 
 .but {
     background-color: var(--primary);
@@ -146,7 +150,7 @@ input,
 }
 
 .hero-img {
-    width: 600px;
+    width: 450px;
     animation: moveImage 1s linear infinite alternate;
     display: inline-block;
 }
@@ -173,6 +177,7 @@ p {
 
 .link {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .link a {
@@ -188,10 +193,6 @@ p {
 }
 
 /* Error-Shake */
-.error-shake {
-    animation: shake 0.2s ease-in-out 0s 3;
-    border: 2px solid #ff4d4d !important;
-}
 
 @keyframes shake {
 
@@ -208,6 +209,29 @@ p {
         transform: translateX(-6px);
     }
 }
+.error-shake {
+    animation: shake 0.3s ease-in-out 3;
+    border: 2px solid #ff4d4d !important;;
+}
+
+/* Sign Up */
+.user_name {
+    display: flex;
+    gap: 5px;
+}
+
+.gender {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.gender .male,.female {
+    width: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Sign Up */
 
 /* Media */
 @media(max-width: 600px) {
@@ -225,7 +249,7 @@ p {
 
     .card {
         margin: 10px;
-        width: 300px;
+        width: 320px;
         text-align: center;
     }
 

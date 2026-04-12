@@ -1,43 +1,58 @@
+// /* Form Elements */
 const loginForm = document.querySelector('form');
-const inputText = document.querySelector('#phonNumber'); 
-const inputPassword = document.querySelector('#password');
-const togglePass = document.querySelector('#togglePassword');
-
-
+const inputPassword = document.querySelector('#password1');
+const inputConfirmPassword = document.querySelector('#password2');
+const togglePass = document.querySelectorAll('.toggle-btn');
 
 // Form Validation
 loginForm.addEventListener('submit', function(event) {
-    const inputs = [inputText, inputPassword];
     let hasError = false;
+    const inputs = event.target.querySelectorAll('input');
 
     inputs.forEach(input => {
-        if (input.value.trim() === "") {
+    
+        if (input.type !== 'radio' && input.value.trim() === "") {
             hasError = true;
-            
             input.style.border = "2px solid #ff4d4d";
-            
             input.classList.add('error-shake');
             
             setTimeout(() => {
                 input.classList.remove('error-shake');
             }, 500);
-
-        } else {
+        } else if (input.type !== 'radio') {
             input.style.border = "1px solid var(--text-muted)";
         }
     });
 
+    if (inputPassword && inputConfirmPassword && inputPassword.value !== "" && inputConfirmPassword.value !== "") {
+        if (inputPassword.value !== inputConfirmPassword.value) {
+            hasError = true;
+            
+            [inputPassword, inputConfirmPassword].forEach(el => {
+                el.classList.add('error-shake');
+                el.style.border = "2px solid #ff4d4d";
+                setTimeout(() => el.classList.remove('error-shake'), 500);
+            });
+
+            alert("كلمة المرور غير متطابقة");
+        }
+    }
+
     if (hasError) {
-        event.preventDefault(); // بيمنع إرسال البيانات لو فيه خانة فاضية
+        event.preventDefault(); 
     }
 });
 
 // Toggle Password
-
-togglePass.addEventListener('click', function (e){
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    const icon = this.querySelector('i');
-    icon.classList.toggle('fa-eye');
-    icon.classList.toggle('fa-eye-slash');
+togglePass.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        // بنمسك الـ input اللي جوه نفس الصندوق مع الزرار
+        const myInput = btn.parentElement.querySelector('input');
+        const type = myInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        myInput.setAttribute('type', type);
+        
+        const icon = btn.querySelector('i');
+        icon.classList.toggle('fa-eye');
+        icon.classList.toggle('fa-eye-slash');
+    });
 });

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <!-- Color css -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
+    <title>انشاء حساب جديد</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="assets/image/logo.png" alt=""></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" id="userIcon" onclick="toggleMenu()"><i class="fa-solid fa-gear"></i></a></li>
+                </ul>
+            </div>
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-menu">
+                        <a href="#" class="sub-menu-link">
+                            English <i class="fa-solid fa-language"></i>
+                            <!-- <span><img class="icon" width="10%" src="assets/icon/egypt.png"></span> -->
+                        </a>
+                        <a href="#" id="darkModeToggle" class="sub-menu-link">
+                            <span id="theme-text">الوضع الليلي</span> <i class="fa-solid fa-moon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="title">
+            <h1>مرحباً بك</h1>
+            <p>مساحتك الخاصة لتدوين يومياتك، ومشاركة لحظاتك مع من تحب بضغطة زر.</p>
+            <img class="hero-img" src="assets/image/sign_up.png" alt="">
+        </div>
+        <div class="card">
+            <h2>تسجيل الدخول</h2>
+            <form action="">
+                <div class="user_name">
+                    <div class="first_name">
+                        <label for="first_name">الاسم الاول</label>
+                        <input type="text" class="first_name" id="first_name" autocomplete="given-name" name=""
+                            placeholder=" الاسم الاول" dir="rtl">
+                    </div>
+                    <div class="last_name">
+                        <label for="last_name">الاسم الثاني</label>
+                        <input type="text" class="last_name" id="last_name" autocomplete="family-name" name=""
+                            placeholder=" الاسم الثاني" dir="rtl">
+                    </div>
+                </div>
+                <label for="username">اسم المستخدم</label>
+                <input type="text" class="userName" id="username" name="" autocomplete="username"
+                    placeholder="اسم المستخدم" dir="rtl">
+
+                <label for="email">البريد الاكترونى</label>
+                <input type="email" class="email" id="email" name="" autocomplete="email" placeholder="البريد الاكترونى"
+                    dir="rtl">
+
+                <label for="phonNumber">رقم الهاتف</label>
+                <input type="tel" class="phonNumber" id="phonNumber" name="" autocomplete="tel" maxlength="11"
+                    placeholder="رقم الهاتف" dir="rtl">
+
+                <label for="password1">كلمة المرور</label>
+                <div class="password-field">
+                    <input type="password" id="password1" name="" minlength="8" placeholder="كلمة المرور" dir="rtl">
+                    <button type="button" class="toggle-btn" id="togglePassword1" autocomplete="new-password"
+                        onclick=""><i class="fa-solid fa-eye"></i></button>
+                </div>
+
+                <label for="password2">تاكيد كلمة المرور</label>
+                <div class="password-field">
+                    <input type="password" id="password2" name="" autocomplete="confirm_password" minlength="8"
+                        placeholder="تاكيد كلمة المرور" dir="rtl">
+                    <button type="button" class="toggle-btn" id="togglePassword2" onclick=""><i
+                            class="fa-solid fa-eye"></i></button>
+                </div>
+
+                <label for="date">تاريخ ميلادك</label>
+                <input type="date" class="date" id="date" name="" placeholder="تاريخ ميلادك" dir="rtl">
+
+                <div class="gender">
+                    <div class="male">
+                        <label for="male">ذكر</label>
+                        <input type="radio" name="gender" class="male" id="male">
+                    </div>
+                    <div class="female">
+                        <label for="female">انثى</label>
+                        <input type="radio" name="gender" class="female" id="female">
+                    </div>
+                </div>
+
+
+                <button type="submit" class="but" onclick="">تسجيل</button>
+            </form>
+            <p class="link"><a href="login.html">لدى حساب بالفعل</a></p>
+        </div>
+    </main>
+    <!-- Java Script -->
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
