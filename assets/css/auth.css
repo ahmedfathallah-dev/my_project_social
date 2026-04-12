@@ -219,9 +219,8 @@ p {
         padding: 20px 48px;
     }
 
-    .logo a {
-        font-size: 25px;
-        font-weight: 900;
+    .logo a img {
+        width: 80px;
     }
 
     .card {
